@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="primary">
+      <ion-button (click)="main()">
+        <ion-icon slot="icon-only" name="refresh"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>BTsender</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-radio-group>
+      <ion-list-header>
+        <ion-label class="ListHeader">Availble Bluetooth Devicse</ion-label>
+      </ion-list-header>
+  
+      <ion-item *ngFor="let i of deviceList;let j=index">
+        <div *ngIf="i.name;then Bname else Bid">
+        </div>
+        
+        <ng-template #Bname>
+            <ion-label >{{i.name}}</ion-label>
+            <ion-radio value="{{i.id}}" (click)="id = i.id;buttonDisable=false;"></ion-radio>
+        </ng-template>
+
+        <ng-template #Bid>
+          <ion-label >{{i.id}}</ion-label>
+          <ion-radio value="{{i.id}}" (click)="id = i.id;buttonDisable=false;"></ion-radio>
+        </ng-template>
+      </ion-item>
+    </ion-radio-group>     
+  </ion-list>
+</ion-content>
+
+
+<ion-toolbar>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" class="connectButton"  (click)="connect(id)" [disabled]="buttonDisable">Connect</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
+
+

@@ -1,0 +1,7 @@
+{
+  "name": "bluetooth_test",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar color="primary">
+        <ion-buttons slot="start">
+            <ion-back-button defaultHref="home"></ion-back-button>
+          </ion-buttons>
+      <ion-title>BTsender</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<ion-content padding >
+    <ion-textarea autofocus="true" class="textSend" autoGrow="true" placeholder="Type text here ..." [(ngModel)]="data"></ion-textarea> 
+</ion-content>
+<ion-toolbar>
+  <ion-grid>
+    <ion-row>
+        <ion-col>
+            <ion-button color="warning" expand="block" class="sendButton" (click)="clearData()">Clear</ion-button> 
+          </ion-col>
+      <ion-col>
+        <ion-button expand="block" class="sendButton" (click)="sendData()">Send</ion-button> 
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-toolbar>
