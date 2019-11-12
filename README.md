@@ -1,0 +1,2 @@
+# BTsender
+Ionic Bluetooth Sender.
