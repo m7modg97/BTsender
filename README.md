@@ -7,4 +7,5 @@ You can use the application as a practical example of using the library, or use 
 
 # Screenshots
 
+In new APK I added MAC address for each device below its name, I have not yet edited the screenshot :)
 ![screens](https://github.com/m7modg97/BTsender/blob/master/image/screens.png)
