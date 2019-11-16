@@ -21,7 +21,7 @@
         </div>
         
         <ng-template #Bname>
-            <ion-label >{{i.name}}</ion-label>
+            <ion-label >{{i.name}}<br>{{i.id}}</ion-label>
             <ion-radio value="{{i.id}}" (click)="id = i.id;buttonDisable=false;"></ion-radio>
         </ng-template>
 
